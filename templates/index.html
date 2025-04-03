@@ -3,15 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>英語ワードカウントアプリ</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Meiryo', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #e0ecf4);
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 400px;
+      font-size: 18px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 24px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🌍 英語ワードカウントアプリ</h1>
-    <textarea id="inputText" placeholder="ここに英語の文章を入力してください"></textarea>
-    <button onclick="countWords()">カウントする</button>
-    <div id="result"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  <div
