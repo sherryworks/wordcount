@@ -1,0 +1,75 @@
+body {
+  font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
+  background: #f3f1e7;
+  margin: 0;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background: #fffefb;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 720px;
+  border-left: 10px solid #1e3932;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1e3932;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+textarea {
+  width: 100%;
+  height: 360px;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 10px;
+  border: 2px solid #d2cfc2;
+  background: #f8f7f3;
+  resize: vertical;
+}
+
+button {
+  align-self: center;
+  padding: 12px 32px;
+  font-size: 18px;
+  background: #1e3932;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 57, 50, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #163029;
+  transform: translateY(-2px);
+}
+
+.result {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #1e3932;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
