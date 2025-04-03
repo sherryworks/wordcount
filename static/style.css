@@ -31,33 +31,18 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* ← これで子要素（テキストエリア、ボタン）を中央に */
   gap: 16px;
 }
 
-textarea {
+textarea, input[type="text"] {
   width: 100%;
-  height: 360px;
-  font-size: 18px;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #ccc5b9;
-  background: #fdfbf6;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
-  resize: vertical;
+  max-width: 640px; /* ← カード内で中央に配置されるよう調整 */
+  box-sizing: border-box;
 }
 
 button {
-  align-self: center;
-  padding: 12px 32px;
-  font-size: 18px;
-  background: #2e4633;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(46, 70, 51, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
+  width: auto; /* ボタンも中央寄せされるように */
 }
 
 button:hover {
