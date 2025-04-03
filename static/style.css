@@ -28,22 +28,73 @@ h1 {
   color: #2e4633;
 }
 
+h2 {
+  color: #2e4633;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* ← これで子要素（テキストエリア、ボタン）を中央に */
+  align-items: center;
   gap: 16px;
 }
 
-textarea, input[type="text"] {
+/* テキストエリアとURL入力欄 */
+textarea,
+input[type="text"] {
   width: 100%;
-  max-width: 640px; /* ← カード内で中央に配置されるよう調整 */
+  max-width: 640px;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #ccc5b9;
+  background: #fdfbf6;
   box-sizing: border-box;
 }
 
+textarea {
+  height: 400px;
+  resize: vertical;
+}
+
 button {
-  width: auto; /* ボタンも中央寄せされるように */
+  padding: 12px 32px;
+  font-size: 18px;
+  background: #2e4633;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(46, 70, 51, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background: #243828;
+  transform: translateY(-2px);
+}
+
+.result {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #2e4633;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
