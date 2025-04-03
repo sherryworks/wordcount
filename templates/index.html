@@ -20,31 +20,11 @@
     <h2>📌 テキストを直接入力</h2>
     <form method="POST">
       <textarea name="text" placeholder="ここに英語の文章を入力してください">{{ text }}</textarea>
-      <button type="submit">テキストをカウント</button>
+      <button type="submit">ワード数をカウント</button>
     </form>
 
     {% if word_count is not none %}
       <div class="result">📝 英語のワード数：{{ word_count }}</div>
-    {% endif %}
-
-    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
-
-    <!-- URL入力フォーム -->
-    <h2>🔗 URLからワードをカウント</h2>
-    <form method="POST">
-      <input type="text" name="url" placeholder="https://example.com" value="{{ url }}"
-             style="width: 100%; padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;">
-      <button type="submit">URLのページをカウント</button>
-    </form>
-
-    {% if url_word_count is not none %}
-      <div class="result">
-        {% if url_word_count is string %}
-          {{ url_word_count }}
-        {% else %}
-          🔍 英語のワード数（URL）：{{ url_word_count }}
-        {% endif %}
-      </div>
     {% endif %}
   </div>
 </body>
