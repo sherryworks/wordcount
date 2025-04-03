@@ -12,7 +12,10 @@ def count_english_words(text):
 def count_words_from_url(url):
     try:
         print(f"🔎 Fetching: {url}")
-        response = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+        }
+        response = requests.get(url, timeout=10, headers=headers)
         if response.status_code != 200:
             return f"❌ ステータスコード: {response.status_code}"
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -23,6 +26,7 @@ def count_words_from_url(url):
     except Exception as e:
         print(f"❌ Error fetching URL: {e}")
         return f"❌ URL取得に失敗しました：{str(e)}"
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
